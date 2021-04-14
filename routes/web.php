@@ -14,7 +14,8 @@
 */
 
 $router->get('/', function () use ($router) {
-    return $router->app->version();
+    return view('home', ['name' => 'manolo']);
+    // return $router->app->version();
 });
 
 // API route group

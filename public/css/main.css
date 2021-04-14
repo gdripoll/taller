@@ -1,0 +1,53 @@
+:root {
+    --background-color: white;
+    --color-text: black;
+    --color-primary: darkred;
+    --color-secondary: darkslategrey;
+    font-size: 20px;
+}
+
+body {
+    margin:0; padding:0;
+    background-color: var(--background-color);
+    color: var(--color-text);
+}
+
+a, a:visited {
+    color: var(--color-primary);
+    font-weight: bold;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+header{
+    padding:8px;
+    font-size: 120%;
+}
+
+/* navegacion */
+nav {
+    position:sticky;
+    top:0px;
+    background-color: #3876b4;
+    color:white;
+    padding:8px;
+}
+nav :is(a,a:visited) {
+    color: mistyrose;
+}
+/* contenido */
+.page {
+    padding: 10px;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* footer */
+footer {
+    position: fixed;
+    bottom:5px;
+    right:10px;
+    font-size: 70%;
+}
