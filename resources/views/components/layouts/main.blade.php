@@ -20,11 +20,14 @@
 <body>
 
     <header>
-        <a href="/">TL</a> | TallerLiterario
+        <a href="/">TL</a> 
+        | TallerLiterario
     </header>
 
     <nav>
-        <a href="/">Inicio</a> &mdash; {{ $title ?? 'TallerLiterario.ar' }}
+        <a href="/">Inicio</a> 
+        | <a href="/auth/login">Login</a> 
+        &mdash; {{ $title ?? 'TallerLiterario.ar' }}
     </nav>
 
     <div class="page">{{ $slot }}</div>

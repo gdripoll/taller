@@ -19,12 +19,17 @@ $router->get('/', function () use ($router) {
 });
 
 // API route group
-$router->group(['prefix' => 'sys'], function () use ($router) {
-    $router->post('register', 'AuthController@register');
-    $router->post('login', 'AuthController@login');
+$router->group(['prefix' => 'auth'], function () use ($router) {
+
+    $router->get('login', 'AuthController@login');
+    $router->post('login', 'AuthController@do_login');
+
+    $router->get('register', 'AuthController@register');
+    $router->post('register', 'AuthController@do_register');
+
 });
 
-$router->group(['prefix' => 'auth'], function () use ($router) {
+$router->group(['prefix' => 'sys'], function () use ($router) {
     $router->get('users/{id}', 'UserController@singleUser');
     $router->get('users', 'UserController@allUsers');
 });

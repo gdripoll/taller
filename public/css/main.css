@@ -37,6 +37,7 @@ nav {
 nav :is(a,a:visited) {
     color: mistyrose;
 }
+
 /* contenido */
 .page {
     padding: 10px;
